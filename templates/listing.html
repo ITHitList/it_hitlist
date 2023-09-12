@@ -1,13 +1,40 @@
-<div class="list-group">
+<div class="list-group" data-bs-toggle="modal" data-bs-target="#view_post{{listing.id}}">
   <a href="#" class="list-group-item list-group-item-action" aria-current="true">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">{{listing['title']}}</h5>
-      <small>Posted: {{listing['post_date']}}</small>
+      <small>
+        Posted: {{listing['post_date']}}
+        <br>
+        {{listing['severity']}}
+      </small>
+
     </div>
     <p class="mb-1">{{listing['description']}}</p>
     <small>Due: {{listing['due_date']}}</small>
     <br>
     Tags: <span class="badge text-bg-secondary">{{listing['tags']}}</span>
- 
   </a>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="view_post{{listing.id}}" tabindex="-1" aria-labelledby="view_postLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="view_postLabel">Modal - {{listing['title']}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="text-align: left; color: #000000;">
+        {{listing['title']}}<br>
+        Posted: {{listing['post_date']}}<br>
+        Due: {{listing['due_date']}}<br>
+        {{listing['tags']}}<br>
+        Details: {{listing['description']}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
