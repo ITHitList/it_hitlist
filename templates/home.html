@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IT Hit List</title>
+    <title>Skill Mine</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
@@ -17,7 +17,7 @@
         <h2 class="accordion-header">
           <button class="accordion-button shadow-none" style="background-color: #ff3300; color: white; padding: 5px; font-size: .85rem;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
             <div style="width: 100%; text-align: center;" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
-              Dont Be Scammed!
+              Avoid Scams
             </div>
           </button>
         </h2>
@@ -35,8 +35,10 @@
     
     <nav class="navbar">
       <div class="container-fluid">
-        <a class="navbar-brand me-auto" href="#">IT-Fu</a>
-        {{company_name}}
+        <a class="navbar-brand me-auto" href="#">{{company_name}}</a>
+        <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+        <a href="https://www.flaticon.com/free-icons/pickaxe" title="pickaxe icons">Pickaxe icons created by juicy_fish - Flaticon</a>
+
         <a class="nav-link" href="#">Sign In</a>
       </div>
     </nav>
@@ -102,7 +104,7 @@
     </div>
 
   <div class="buttonBox" style="height: 6%; width: 100%; background-color: #000000; color: #FFFFFF; text-align: center;">
-      <a> Post Assignment</a>
+      <a>Post Assignment ($1)</a>
   </div>      
     <div style="height: 100px;" class="row">
       <div style="background-color: #c4c2bb; text-align: center;" class="col-3">
@@ -159,16 +161,7 @@
         <br><br>
 
           {% for listing in listings %}
-            <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">{{listing['title']}}</h5>
-                  <small>{{listing['post_date']}}</small>
-                </div>
-                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                <small>And some small print.</small>
-              </a>
-            </div>
+            {% include 'listing.html' %}
           {% endfor %}  
         
       </div>
