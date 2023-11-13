@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Skill Mine</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">  
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home2.css') }}">  
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -111,100 +111,97 @@
   </div> 
 
   <div class="b-example-divider"></div>
+
+  <div class="row">
+    <div class="card col-4">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+        <p class="card-text">Some quick 1 text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+
+    <div class="card col-4">
+      <div class="card-body">
+        <h5 class="card-title">Featured</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Due Soon</h6>
+        <p class="card-text">Some quick 1 text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+
+    <div class="card col-4">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Highest Reward</h6>
+        <p class="card-text">Some quick 1 text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row filterBox">
+    <div class="col-3">
+      Filters
+      <br><br>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item flex-fill">
+          <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+          <label class="form-check-label" for="firstCheckbox">Urgency</label>
+        </li>
+        <li class="list-group-item flex-fill">
+          <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+          <label class="form-check-label" for="secondCheckbox">Date Created</label>
+        </li>
+        <li class="list-group-item flex-fill">
+          <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+          <label class="form-check-label" for="thirdCheckbox">Date Due</label>  
+        </li>
+      </ul>
+
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item flex-fill">
+          <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+          <label class="form-check-label" for="firstCheckbox">Reward Amount</label>
+        </li>
+        <li class="list-group-item flex-fill">
+          <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+          <label class="form-check-label" for="secondCheckbox">Tags</label>
+        </li>
+        <li class="list-group-item flex-fill">
+          <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+          <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>  
+        </li>
+      </ul>
+
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item flex-fill">
+          <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+          <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+        </li>
+        <li class="list-group-item flex-fill">
+          <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+          <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+        </li>
+        <li class="list-group-item flex-fill">
+          <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+          <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>  
+        </li>
+      </ul>
+    </div>
   
-  <div class="body-box">
+  <div class="col-9 sortView">
+    Sort | Show Rows | Change View
+    <br><br>
 
-    <div class="row">
-      <div class="card col-4">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-          <p class="card-text">Some quick 1 text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
+      {% for listing in listings %}
+        {% include 'listing.html' %}
+      {% endfor %}  
 
-      <div class="card col-4">
-        <div class="card-body">
-          <h5 class="card-title">Featured</h5>
-          <h6 class="card-subtitle mb-2 text-body-secondary">Due Soon</h6>
-          <p class="card-text">Some quick 1 text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
-
-      <div class="card col-4">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-body-secondary">Highest Reward</h6>
-          <p class="card-text">Some quick 1 text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row filterBox">
-      <div class="col-3">
-        Filters
-        <br><br>
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-            <label class="form-check-label" for="firstCheckbox">Urgency</label>
-          </li>
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-            <label class="form-check-label" for="secondCheckbox">Date Created</label>
-          </li>
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-            <label class="form-check-label" for="thirdCheckbox">Date Due</label>  
-          </li>
-        </ul>
-
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-            <label class="form-check-label" for="firstCheckbox">Reward Amount</label>
-          </li>
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-            <label class="form-check-label" for="secondCheckbox">Tags</label>
-          </li>
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-            <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>  
-          </li>
-        </ul>
-
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-            <label class="form-check-label" for="firstCheckbox">First checkbox</label>
-          </li>
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-            <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
-          </li>
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-            <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>  
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-9 sortView">
-        Sort | Show Rows | Change View
-        <br><br>
-          {% for listing in listings %}
-            {% include 'listing.html' %}
-          {% endfor %}  
-      </div>
-    </div>
-    
   </div>
   
 </main>
