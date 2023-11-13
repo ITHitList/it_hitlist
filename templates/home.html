@@ -150,50 +150,50 @@
       <div class="col-3">
         Filters
         <br><br>
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-            <label class="form-check-label" for="firstCheckbox">Urgency</label>
-          </li>
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-            <label class="form-check-label" for="secondCheckbox">Date Created</label>
-          </li>
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-            <label class="form-check-label" for="thirdCheckbox">Date Due</label>  
-          </li>
-        </ul>
+        Title
+        <br>
+        Description
+        <br>
+        Tags
+        <br>
 
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-            <label class="form-check-label" for="firstCheckbox">Reward Amount</label>
-          </li>
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-            <label class="form-check-label" for="secondCheckbox">Tags</label>
-          </li>
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-            <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>  
-          </li>
-        </ul>
+        <p class="d-inline-flex gap-1">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseCreatedDate" role="button" aria-expanded="false" aria-controls="collapseCreatedDate">
+            Date Created
+          </a>
+        </p>
+        
+        <div class="collapse" id="collapseCreatedDate">
+          <div class="card card-body">
+            <form action="/action_page.php">
+              <label for="birthday">Date Created:</label>
+              <input type="date" id="createdDate" name="createdDate">
+              <input type="submit">
+            </form>
+          </div>
+        </div>
+        <br>
 
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-            <label class="form-check-label" for="firstCheckbox">First checkbox</label>
-          </li>
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-            <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
-          </li>
-          <li class="list-group-item flex-fill">
-            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-            <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>  
-          </li>
-        </ul>
+
+        <p class="d-inline-flex gap-1">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseDueDate" role="button" aria-expanded="false" aria-controls="collapseDueDate">
+            Date Due
+          </a>
+        </p>
+
+        <div class="collapse" id="collapseDueDate">
+          <div class="card card-body">
+            <form action="/action_page.php">
+              <label for="birthday">Date Due:</label>
+              <input type="date" id="dueDate" name="dueDate">
+              <input type="submit">
+            </form>
+          </div>
+        </div>
+        <br>
+          Urgency
+          <br>
+          Reward
       </div>
 
       <div class="col-9 sortView">
