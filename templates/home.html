@@ -148,52 +148,132 @@
 
     <div class="row filterBox">
       <div class="col-3">
-        Filters
+        Filter By:
         <br><br>
-        Title
-        <br>
-        Description
-        <br>
-        Tags
-        <br>
 
-        <p class="d-inline-flex gap-1">
-          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseCreatedDate" role="button" aria-expanded="false" aria-controls="collapseCreatedDate">
-            Date Created
-          </a>
-        </p>
+
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                Title
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                stuff
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                Description
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                stuff
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                Tags
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                stuff
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                Date Span
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <div class="card card-body">
+                  <form action="/action_page.php">
+                    <label for="birthday">Date Span:</label>
+                    <input type="date" id="dueDate" name="spanDate">
+                    <input type="submit">
+                  </form>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                Date Created
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <div class="card card-body">
+                  <form action="/action_page.php">
+                    <label for="birthday">Date Created:</label>
+                    <input type="date" id="createdDate" name="createdDate">
+                    <input type="submit">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                Date Due
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <div class="card card-body">
+                  <form action="/action_page.php">
+                    <label for="birthday">Date Due:</label>
+                    <input type="date" id="dueDate" name="dueDate">
+                    <input type="submit">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                Urgency
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                stuff
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
+                Reward
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                stuff
+              </div>
+            </div>
+          </div>
+          
+        </div>
         
-        <div class="collapse" id="collapseCreatedDate">
-          <div class="card card-body">
-            <form action="/action_page.php">
-              <label for="birthday">Date Created:</label>
-              <input type="date" id="createdDate" name="createdDate">
-              <input type="submit">
-            </form>
-          </div>
-        </div>
-        <br>
-
-
-        <p class="d-inline-flex gap-1">
-          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseDueDate" role="button" aria-expanded="false" aria-controls="collapseDueDate">
-            Date Due
-          </a>
-        </p>
-
-        <div class="collapse" id="collapseDueDate">
-          <div class="card card-body">
-            <form action="/action_page.php">
-              <label for="birthday">Date Due:</label>
-              <input type="date" id="dueDate" name="dueDate">
-              <input type="submit">
-            </form>
-          </div>
-        </div>
-        <br>
-          Urgency
-          <br>
-          Reward
       </div>
 
       <div class="col-9 sortView">

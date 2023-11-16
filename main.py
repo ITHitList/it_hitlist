@@ -73,5 +73,9 @@ def listings_main():
 def listings_main2():
   return render_template('home2.html', listings=LISTINGS, company_name='Skill Mine')
 
+@app.route("/landing")
+def listings_landing():
+  return render_template('landing.html', company_name='Skill Mine')
+
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
